@@ -8,7 +8,7 @@ import '../models/login_request_body.dart';
 class LoginRepo {
   final ApiService _apiService;
 
-  LoginRepo(this._apiService);
+  LoginRepo(this._apiService); // علاقه = ترابط
 
   Future<ApiResult<LoginResponse>> login(
       LoginRequestBody loginRequestBody) async {
