@@ -1,3 +1,5 @@
+// ignore_for_file: depend_on_referenced_packages
+
 import 'package:json_annotation/json_annotation.dart';
 // part 'test.dart';
 part 'api_error_model.g.dart';
@@ -14,4 +16,3 @@ class ApiErrorModel {
 
   Map<String, dynamic> toJson() => _$ApiErrorModelToJson(this);
 }
-   

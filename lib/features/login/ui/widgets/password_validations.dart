@@ -46,7 +46,7 @@ class PasswordValidations extends StatelessWidget {
         ),
         horizontalSpace(6),
         Text(
-          //'At least 1 lowercase letter',
+          // 'At least 1 lowercase letter',
           text,
           style: TextStyles.font13DarkBlueRegular.copyWith(
             decoration: hasValidated ? TextDecoration.lineThrough : null,

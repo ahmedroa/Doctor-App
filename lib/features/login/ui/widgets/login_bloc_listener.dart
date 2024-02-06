@@ -1,4 +1,5 @@
 import 'package:doctor/core/helpers/extensions.dart';
+import 'package:doctor/core/theming/widgets/loading.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -14,19 +15,12 @@ class LoginBlocListener extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocListener<LoginCubit, LoginState>(
-      listenWhen: (previous, current) =>
-          current is Loading || current is Success || current is Error,
+      // listenWhen: (previous, current) =>
+      //     current is Loading || current is Success || current is Error,
       listener: (context, state) {
         state.whenOrNull(
           loading: () {
-            showDialog(
-              context: context,
-              builder: (context) => const Center(
-                child: CircularProgressIndicator(
-                  color: ColorsManager.mainBlue,
-                ),
-              ),
-            );
+            loadingWidget(context);
           },
           success: (loginResponse) {
             context.pop();
@@ -34,31 +28,6 @@ class LoginBlocListener extends StatelessWidget {
           },
           error: (error) {
             context.pop();
-            showDialog(
-              context: context,
-              builder: (context) => AlertDialog(
-                icon: const Icon(
-                  Icons.error,
-                  color: Colors.red,
-                  size: 32,
-                ),
-                content: Text(
-                  error,
-                  style: TextStyles.font15DarkBlueMedium,
-                ),
-                actions: [
-                  TextButton(
-                    onPressed: () {
-                      context.pop();
-                    },
-                    child: Text(
-                      'Got it',
-                      style: TextStyles.font14BlueSemiBold,
-                    ),
-                  ),
-                ],
-              ),
-            );
           },
         );
       },

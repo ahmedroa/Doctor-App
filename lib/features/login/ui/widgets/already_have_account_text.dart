@@ -1,3 +1,6 @@
+import 'package:doctor/core/helpers/extensions.dart';
+import 'package:doctor/core/routing/routes.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/theming/styles.dart';
@@ -18,6 +21,10 @@ class AlreadyHaveAccountText extends StatelessWidget {
           TextSpan(
             text: ' Sign Up',
             style: TextStyles.font13BlueSemiBold,
+            recognizer: TapGestureRecognizer()
+              ..onTap = () {
+                context.pushReplacementNamed(Routes.signUpScreen);
+              },
           ),
         ],
       ),
