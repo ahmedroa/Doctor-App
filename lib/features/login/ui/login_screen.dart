@@ -1,6 +1,9 @@
+// ignore_for_file: depend_on_referenced_packages
+
+import 'package:doctor/core/helpers/extensions.dart';
 import 'package:doctor/core/helpers/spacing.dart';
+import 'package:doctor/core/routing/routes.dart';
 import 'package:doctor/core/theming/widgets/app_text_button.dart';
-import 'package:doctor/features/login/data/models/login_request_body.dart';
 import 'package:doctor/features/login/ui/widgets/login_bloc_listener.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -42,6 +45,7 @@ class LoginScreen extends StatelessWidget {
                     InkWell(
                       onTap: () {
                         // context.pushNamed('routeName');
+                        context.pushNamed(Routes.forgotPassword);
                       },
                       child: Align(
                         alignment: AlignmentDirectional.centerEnd,
@@ -76,12 +80,18 @@ class LoginScreen extends StatelessWidget {
 
   void validateThenDoLogin(BuildContext context) {
     if (context.read<LoginCubit>().formKey.currentState!.validate()) {
-      context.read<LoginCubit>().emitLoginStates(
-            LoginRequestBody(
-              email: context.read<LoginCubit>().emailController.text,
-              password: context.read<LoginCubit>().passwordController.text,
-            ),
-          );
+      context.read<LoginCubit>().emitLoginStates();
     }
   }
+
+  // void validateThenDoLogin(BuildContext context) {
+  //   if (context.read<LoginCubit>().formKey.currentState!.validate()) {
+  //     context.read<LoginCubit>().emitLoginStates(
+  //           LoginRequestBody(
+  //             email: context.read<LoginCubit>().emailController.text,
+  //             password: context.read<LoginCubit>().passwordController.text,
+  //           ),
+  //         );
+  //   }
 }
+// }

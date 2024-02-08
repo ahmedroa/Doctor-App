@@ -1,6 +1,5 @@
 import 'package:doctor/core/routing/app_router.dart';
 import 'package:doctor/core/theming/colors.dart';
-import 'package:doctor/features/login/ui/forgotPassword.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -23,9 +22,8 @@ class DocApp extends StatelessWidget {
             scaffoldBackgroundColor: Colors.white,
           ),
           debugShowCheckedModeBanner: false,
-          // initialRoute: Routes.onBoardingScreen,
-          // onGenerateRoute: appRouter.generateRoute,
-          home: const ForgotPassword(),
+          initialRoute: Routes.onBoardingScreen,
+          onGenerateRoute: appRouter.generateRoute,
         ));
   }
 }
