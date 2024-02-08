@@ -2,6 +2,7 @@ import 'package:doctor/core/helpers/app_regex.dart';
 import 'package:doctor/core/theming/widgets/app_text_form_field.dart';
 import 'package:doctor/features/sign_up/logic/sign_up_cubit.dart';
 import 'package:flutter/material.dart';
+// ignore: depend_on_referenced_packages
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../core/helpers/spacing.dart';
 

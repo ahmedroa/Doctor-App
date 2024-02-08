@@ -13,7 +13,7 @@ final getIt = GetIt.instance;
 Future<void> setupGetIt() async {
   // Dio & ApiService
   Dio dio = await DioFactory.getDio();
-  getIt.registerLazySingleton<ApiService>(() => ApiService(dio));
+  GetIt.instance.registerLazySingleton<ApiService>(() => ApiService(dio));
 
   // login
   getIt.registerLazySingleton<LoginRepo>(() => LoginRepo(getIt()));
@@ -23,8 +23,6 @@ Future<void> setupGetIt() async {
   getIt.registerLazySingleton<SignupRepo>(() => SignupRepo(getIt()));
   getIt.registerFactory<SignupCubit>(() => SignupCubit(getIt()));
 
-  // Home
-
   // getIt.registerFactory(() => null) ==>> استخدام ام اكثر من مره وكل مره اطلع منه اةبجكت
-  //   getIt.registerLazySingleton<SignupRepo>(() => SignupRepo(getIt())); ==>> instance one
+  //  getIt.registerLazySingleton<SignupRepo>(() => SignupRepo(getIt()));
 }
