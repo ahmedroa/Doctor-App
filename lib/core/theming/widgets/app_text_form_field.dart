@@ -14,11 +14,13 @@ class AppTextFormField extends StatelessWidget {
   final bool? isObscureText;
   final Widget? suffixIcon;
   final Color? backgroundColor;
+  final TextInputType? keyboardType;
   final TextEditingController? controller;
   final Function(String?) validator;
 
   const AppTextFormField({
     super.key,
+    this.keyboardType,
     this.contentPadding,
     this.focusedBorder,
     this.enabledBorder,
@@ -35,6 +37,7 @@ class AppTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      keyboardType: keyboardType,
       controller: controller,
       decoration: InputDecoration(
         isDense: true,

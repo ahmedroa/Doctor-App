@@ -62,6 +62,7 @@ class _SignupFormState extends State<SignupForm> {
           ),
           verticalSpace(18),
           AppTextFormField(
+            keyboardType: TextInputType.number,
             hintText: 'Phone number',
             validator: (value) {
               // if (value == null ||
@@ -74,6 +75,7 @@ class _SignupFormState extends State<SignupForm> {
           ),
           verticalSpace(18),
           AppTextFormField(
+            keyboardType: TextInputType.emailAddress,
             hintText: 'Email',
             validator: (value) {
               if (value == null ||

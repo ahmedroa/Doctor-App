@@ -1,5 +1,6 @@
 import 'package:doctor/core/di/dependency_injection.dart';
 import 'package:doctor/core/routing/routes.dart';
+import 'package:doctor/features/login/ui/forgotPassword.dart';
 import 'package:doctor/features/sign_up/logic/sign_up_cubit.dart';
 import 'package:doctor/features/sign_up/ui/sign_up_screen.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -32,10 +33,10 @@ class AppRouter {
             child: const SignupScreen(),
           ),
         );
-      // case Routes.homeScreen:
-      //   return MaterialPageRoute(
-      //     builder: (_) => const HomeScreen(),
-      //   );
+      case Routes.homeScreen:
+        return MaterialPageRoute(
+          builder: (_) => const ForgotPassword(),
+        );
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(

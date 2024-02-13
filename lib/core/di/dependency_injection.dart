@@ -23,6 +23,7 @@ Future<void> setupGetIt() async {
   getIt.registerLazySingleton<SignupRepo>(() => SignupRepo(getIt()));
   getIt.registerFactory<SignupCubit>(() => SignupCubit(getIt()));
 
+// home
   // getIt.registerFactory(() => null) ==>> استخدام ام اكثر من مره وكل مره اطلع منه اةبجكت
   //  getIt.registerLazySingleton<SignupRepo>(() => SignupRepo(getIt()));
 }
