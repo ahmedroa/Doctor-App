@@ -1,5 +1,6 @@
 import 'package:doctor/core/routing/app_router.dart';
 import 'package:doctor/core/theming/colors.dart';
+import 'package:doctor/features/login/ui/login_screen.dart';
 import 'package:doctor/features/sign_up/ui/OTP_Verification.dart';
 import 'package:flutter/material.dart';
 
@@ -22,10 +23,9 @@ class DocApp extends StatelessWidget {
             primaryColor: ColorsManager.mainBlue,
             scaffoldBackgroundColor: Colors.white,
           ),
-          debugShowCheckedModeBanner: false,
-          // initialRoute: Routes.onBoardingScreen,
-          // onGenerateRoute: appRouter.generateRoute,
-          home: const OtpVerification(),
+          debugShowCheckedModeBanner: false, initialRoute: Routes.onBoardingScreen,
+          onGenerateRoute: appRouter.generateRoute,
+          // home: const LoginScreen(),
         ));
   }
 }
