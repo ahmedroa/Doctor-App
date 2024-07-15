@@ -1,6 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, non_nullable_equals_parameter
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'login_state.dart';
@@ -70,14 +70,12 @@ mixin _$LoginState<T> {
 
 /// @nodoc
 abstract class $LoginStateCopyWith<T, $Res> {
-  factory $LoginStateCopyWith(
-          LoginState<T> value, $Res Function(LoginState<T>) then) =
+  factory $LoginStateCopyWith(LoginState<T> value, $Res Function(LoginState<T>) then) =
       _$LoginStateCopyWithImpl<T, $Res, LoginState<T>>;
 }
 
 /// @nodoc
-class _$LoginStateCopyWithImpl<T, $Res, $Val extends LoginState<T>>
-    implements $LoginStateCopyWith<T, $Res> {
+class _$LoginStateCopyWithImpl<T, $Res, $Val extends LoginState<T>> implements $LoginStateCopyWith<T, $Res> {
   _$LoginStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -88,18 +86,14 @@ class _$LoginStateCopyWithImpl<T, $Res, $Val extends LoginState<T>>
 
 /// @nodoc
 abstract class _$$InitialImplCopyWith<T, $Res> {
-  factory _$$InitialImplCopyWith(
-          _$InitialImpl<T> value, $Res Function(_$InitialImpl<T>) then) =
+  factory _$$InitialImplCopyWith(_$InitialImpl<T> value, $Res Function(_$InitialImpl<T>) then) =
       __$$InitialImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
-class __$$InitialImplCopyWithImpl<T, $Res>
-    extends _$LoginStateCopyWithImpl<T, $Res, _$InitialImpl<T>>
+class __$$InitialImplCopyWithImpl<T, $Res> extends _$LoginStateCopyWithImpl<T, $Res, _$InitialImpl<T>>
     implements _$$InitialImplCopyWith<T, $Res> {
-  __$$InitialImplCopyWithImpl(
-      _$InitialImpl<T> _value, $Res Function(_$InitialImpl<T>) _then)
-      : super(_value, _then);
+  __$$InitialImplCopyWithImpl(_$InitialImpl<T> _value, $Res Function(_$InitialImpl<T>) _then) : super(_value, _then);
 }
 
 /// @nodoc
@@ -114,8 +108,7 @@ class _$InitialImpl<T> implements _Initial<T> {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$InitialImpl<T>);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$InitialImpl<T>);
   }
 
   @override
@@ -202,18 +195,14 @@ abstract class _Initial<T> implements LoginState<T> {
 
 /// @nodoc
 abstract class _$$LoadingImplCopyWith<T, $Res> {
-  factory _$$LoadingImplCopyWith(
-          _$LoadingImpl<T> value, $Res Function(_$LoadingImpl<T>) then) =
+  factory _$$LoadingImplCopyWith(_$LoadingImpl<T> value, $Res Function(_$LoadingImpl<T>) then) =
       __$$LoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
-class __$$LoadingImplCopyWithImpl<T, $Res>
-    extends _$LoginStateCopyWithImpl<T, $Res, _$LoadingImpl<T>>
+class __$$LoadingImplCopyWithImpl<T, $Res> extends _$LoginStateCopyWithImpl<T, $Res, _$LoadingImpl<T>>
     implements _$$LoadingImplCopyWith<T, $Res> {
-  __$$LoadingImplCopyWithImpl(
-      _$LoadingImpl<T> _value, $Res Function(_$LoadingImpl<T>) _then)
-      : super(_value, _then);
+  __$$LoadingImplCopyWithImpl(_$LoadingImpl<T> _value, $Res Function(_$LoadingImpl<T>) _then) : super(_value, _then);
 }
 
 /// @nodoc
@@ -228,8 +217,7 @@ class _$LoadingImpl<T> implements Loading<T> {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadingImpl<T>);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$LoadingImpl<T>);
   }
 
   @override
@@ -316,20 +304,16 @@ abstract class Loading<T> implements LoginState<T> {
 
 /// @nodoc
 abstract class _$$SuccessImplCopyWith<T, $Res> {
-  factory _$$SuccessImplCopyWith(
-          _$SuccessImpl<T> value, $Res Function(_$SuccessImpl<T>) then) =
+  factory _$$SuccessImplCopyWith(_$SuccessImpl<T> value, $Res Function(_$SuccessImpl<T>) then) =
       __$$SuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
 
 /// @nodoc
-class __$$SuccessImplCopyWithImpl<T, $Res>
-    extends _$LoginStateCopyWithImpl<T, $Res, _$SuccessImpl<T>>
+class __$$SuccessImplCopyWithImpl<T, $Res> extends _$LoginStateCopyWithImpl<T, $Res, _$SuccessImpl<T>>
     implements _$$SuccessImplCopyWith<T, $Res> {
-  __$$SuccessImplCopyWithImpl(
-      _$SuccessImpl<T> _value, $Res Function(_$SuccessImpl<T>) _then)
-      : super(_value, _then);
+  __$$SuccessImplCopyWithImpl(_$SuccessImpl<T> _value, $Res Function(_$SuccessImpl<T>) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -367,8 +351,7 @@ class _$SuccessImpl<T> implements Success<T> {
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
 
   @JsonKey(ignore: true)
   @override
@@ -456,26 +439,21 @@ abstract class Success<T> implements LoginState<T> {
 
   T get data;
   @JsonKey(ignore: true)
-  _$$SuccessImplCopyWith<T, _$SuccessImpl<T>> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$SuccessImplCopyWith<T, _$SuccessImpl<T>> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$ErrorImplCopyWith<T, $Res> {
-  factory _$$ErrorImplCopyWith(
-          _$ErrorImpl<T> value, $Res Function(_$ErrorImpl<T>) then) =
+  factory _$$ErrorImplCopyWith(_$ErrorImpl<T> value, $Res Function(_$ErrorImpl<T>) then) =
       __$$ErrorImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({String error});
 }
 
 /// @nodoc
-class __$$ErrorImplCopyWithImpl<T, $Res>
-    extends _$LoginStateCopyWithImpl<T, $Res, _$ErrorImpl<T>>
+class __$$ErrorImplCopyWithImpl<T, $Res> extends _$LoginStateCopyWithImpl<T, $Res, _$ErrorImpl<T>>
     implements _$$ErrorImplCopyWith<T, $Res> {
-  __$$ErrorImplCopyWithImpl(
-      _$ErrorImpl<T> _value, $Res Function(_$ErrorImpl<T>) _then)
-      : super(_value, _then);
+  __$$ErrorImplCopyWithImpl(_$ErrorImpl<T> _value, $Res Function(_$ErrorImpl<T>) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -601,6 +579,5 @@ abstract class Error<T> implements LoginState<T> {
 
   String get error;
   @JsonKey(ignore: true)
-  _$$ErrorImplCopyWith<T, _$ErrorImpl<T>> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ErrorImplCopyWith<T, _$ErrorImpl<T>> get copyWith => throw _privateConstructorUsedError;
 }
