@@ -1,8 +1,11 @@
+import 'package:doctor/core/di/dependency_injection.dart';
+import 'package:doctor/core/helpers/constants.dart';
 import 'package:doctor/core/routing/app_router.dart';
 import 'package:doctor/core/routing/routes.dart';
 import 'package:doctor/core/theming/colors.dart';
+import 'package:doctor/features/home/logic/home_cubit.dart';
 import 'package:doctor/features/home/ui/home_screen.dart';
-
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -21,9 +24,14 @@ class DocApp extends StatelessWidget {
             scaffoldBackgroundColor: Colors.white,
           ),
           debugShowCheckedModeBanner: false,
-          home: HomeScreen(),
-          // initialRoute: Routes.onBoardingScreen,
-          // onGenerateRoute: appRouter.generateRoute,
+          // home: BlocProvider(
+          //   create: (context) => HomeCubit(getIt())..getSpecializations(),
+          //   child: const HomeScreen(),
+          // ),
+          initialRoute: isLoggedInUser ? Routes.homeScreen : Routes.onBoardingScreen,
+          onGenerateRoute: appRouter.generateRoute,
         ));
   }
 }
+
+//  flutter pub run build_runner build --delete-conflicting-outputs

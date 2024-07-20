@@ -73,6 +73,12 @@ dev_dependencies:
   # for adapting screen and font size.
   flutter_screenutil: ^5.9.0
   pin_code_fields: ^8.0.1
+  # reading and writing simple key-value pairs
+  shared_preferences: ^2.2.3
+  # provides API to store data in secure storage.
+  flutter_secure_storage: ^9.2.2
+  shimmer: ^3.0.0
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
