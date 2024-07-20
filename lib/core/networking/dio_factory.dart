@@ -28,9 +28,9 @@ class DioFactory {
   static void addDioHeaders() async {
     dio?.options.headers = {
       'Accept': 'application/json',
-      'Authorization': 'Bearer ${await SharedPrefHelper.getSecuredString(SharedPrefKeys.userToken)}',
-      // 'Authorization':
-      //     'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3ZjYXJlLmludGVncmF0aW9uMjUuY29tL2FwaS9hdXRoL2xvZ2luIiwiaWF0IjoxNzIxNDc5NDI4LCJleHAiOjE3MjE1NjU4MjgsIm5iZiI6MTcyMTQ3OTQyOCwianRpIjoiZ1AxSW1hVnk5a3hkcmZVOSIsInN1YiI6IjE1ODMiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.rFK7yZqDusXQiw3_aBIcm5LUFFnT_zvL9cVplWMd8Ts',
+      // 'Authorization': 'Bearer ${await SharedPrefHelper.getSecuredString(SharedPrefKeys.userToken)}',
+      'Authorization':
+          'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3ZjYXJlLmludGVncmF0aW9uMjUuY29tL2FwaS9hdXRoL2xvZ2luIiwiaWF0IjoxNzIxNDc5NDI4LCJleHAiOjE3MjE1NjU4MjgsIm5iZiI6MTcyMTQ3OTQyOCwianRpIjoiZ1AxSW1hVnk5a3hkcmZVOSIsInN1YiI6IjE1ODMiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.rFK7yZqDusXQiw3_aBIcm5LUFFnT_zvL9cVplWMd8Ts',
     };
   }
 

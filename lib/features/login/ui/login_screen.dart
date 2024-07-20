@@ -3,6 +3,7 @@
 import 'package:doctor/core/helpers/extensions.dart';
 import 'package:doctor/core/helpers/spacing.dart';
 import 'package:doctor/core/routing/routes.dart';
+import 'package:doctor/core/theming/colors.dart';
 import 'package:doctor/core/theming/widgets/app_text_button.dart';
 import 'package:doctor/features/login/ui/widgets/login_bloc_listener.dart';
 import 'package:flutter/material.dart';
@@ -45,7 +46,8 @@ class LoginScreen extends StatelessWidget {
                     InkWell(
                       onTap: () {
                         // context.pushNamed('routeName');
-                        context.pushNamed(Routes.forgotPassword);
+                        // context.pushNamed(Routes.forgotPassword);
+                        context.pushNamed(Routes.homeScreen);
                       },
                       child: Align(
                         alignment: AlignmentDirectional.centerEnd,
@@ -60,8 +62,25 @@ class LoginScreen extends StatelessWidget {
                       buttonText: "Login",
                       textStyle: TextStyles.font16WhiteSemiBold,
                       onPressed: () {
-                        validateThenDoLogin(context);
+                        // validateThenDoLogin(context);
                         // context.pushNamed(Routes.homeScreen);
+
+                        showDialog(
+                          context: context,
+                          barrierDismissible: false,
+                          builder: (BuildContext context) {
+                            return Center(
+                              child: CircularProgressIndicator(
+                                color: ColorsManager.mainBlue,
+                              ),
+                            );
+                          },
+                        );
+
+                        Future.delayed(Duration(seconds: 2), () {
+                          Navigator.of(context).pop(); // لإخفاء نافذة التحميل
+                          context.pushNamed(Routes.homeScreen);
+                        });
                       },
                     ),
                     verticalSpace(16),
